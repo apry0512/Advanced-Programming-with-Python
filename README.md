@@ -21,24 +21,33 @@ No external dependencies required
 
 
 Steps-
+
 1. Clone this repository.
   
 2. Run the game in a terminal:
 python connect_four.py
 
 3. You can also specify options:
+
 python connect_four.py --difficulty hard
+
 python connect_four.py --ai-first
+
 python connect_four.py --run-tests
 
 Command-line Options
+
 Option Description
+
 --difficulty Set AI difficulty: easy, medium, or hard (default: medium)
+
 --ai-first Let the AI start first
+
 --run-tests Run built-in correctness tests and exit
 
 
 Features-
+
 1. Text-Based Game Loop
 Fully interactive CLI version.
 Human vs Human or Human vs AI modes.
