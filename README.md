@@ -31,12 +31,8 @@ python connect_four.py --difficulty hard
 python connect_four.py --ai-first
 python connect_four.py --run-tests
 
-
-
 Command-line Options
-
 Option Description
-
 --difficulty Set AI difficulty: easy, medium, or hard (default: medium)
 --ai-first Let the AI start first
 --run-tests Run built-in correctness tests and exit
@@ -88,15 +84,22 @@ Example Game Session
 
 Starting Connect Four
 |0 0 0 0 0 0 0|
+
 |0 0 0 0 0 0 0|
+
 |0 0 0 0 0 0 0|
+
 |0 0 0 0 0 0 0|
+
 |0 0 0 0 0 0 0|
+
 |0 0 0 0 0 0 0|
+
 -----------------
+
  0 1 2 3 4 5 6
-Your turn (Player 1). Valid columns: [0, 1, 2, 3, 4, 5, 6]
+
+Your turn (Player 1). 
+Valid columns: [0, 1, 2, 3, 4, 5, 6]
 Choose column (0-6): 3
-AI wins!
-Save this game to JSON? (y/n): y
-Saved game to connect_four_1730759200.json
+
