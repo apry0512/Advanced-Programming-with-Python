@@ -83,6 +83,7 @@ Date: November 2025
 Example Game Session
 
 Starting Connect Four
+
 |0 0 0 0 0 0 0|
 
 |0 0 0 0 0 0 0|
@@ -100,6 +101,8 @@ Starting Connect Four
  0 1 2 3 4 5 6
 
 Your turn (Player 1). 
+
 Valid columns: [0, 1, 2, 3, 4, 5, 6]
+
 Choose column (0-6): 3
 
