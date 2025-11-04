@@ -1,8 +1,4 @@
-"""Connect four- Text based game with AI, game export and tests.
-Usage-
-      python connect_four.py
-      python connect_four.py  --run-tests
-      python connect_four.py  --difficulty hard--ai-first"""
+"""Connect four- Text based game with AI, game export and tests."""
 
 from __future__ import annotations
 import math
