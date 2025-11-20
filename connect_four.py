@@ -47,7 +47,7 @@ class Board:
         print(' ' + ' '.join(str(i) for i in range(COLUMN_COUNT)))
 
     def winning_move(self, piece: int) -> bool:
-      
+
         # Check horizontal win
         for c in range(COLUMN_COUNT - 3):
             for r in range(ROW_COUNT):
@@ -193,7 +193,8 @@ def pick_best_move(board: Board, piece: int, difficulty: str = 'medium') -> int:
     elif difficulty == 'hard':
         depth = 5
     else:
-        depth = 3
+        depth = 3 
+        # Default to medium in case of invalid difficulty 
 
     _, col = minimax(board, depth, -math.inf, math.inf, True, piece)
     if col is None:
@@ -217,14 +218,14 @@ def play_game(human_first: bool = True, ai_difficulty: str = 'medium') -> None:
     board = Board()
     game_over = False
     turn = 0 if human_first else 1
-    moves: List[Tuple[int, int]] = [] 
+    moves: List[Tuple[int, int]] = []
 
     print("Starting Connect Four")
     board.print_board()
 
     while not game_over:
         if turn == 0:
-          
+
             # Human's turn
             valid_cols = board.get_valid_locations()
             print(f"Your turn (Player {PLAYER_PIECE}). Valid columns: {valid_cols}")
@@ -282,13 +283,13 @@ def play_game(human_first: bool = True, ai_difficulty: str = 'medium') -> None:
 def run_basic_tests():
     print("Running basic tests...")
     b = Board()
-   
+
     assert b.get_next_open_row(0) == ROW_COUNT - 1
     r = b.get_next_open_row(0)
     b.drop_piece(r, 0, PLAYER_PIECE)
     assert b.grid[ROW_COUNT - 1][0] == PLAYER_PIECE
     assert b.is_valid_location(0)
-  
+
     for i in range(ROW_COUNT - 1):
         rr = b.get_next_open_row(0)
         if rr is None:
@@ -330,15 +331,25 @@ def main():
     parser = argparse.ArgumentParser(description='Connect Four game')
     parser.add_argument('--run-tests', action='store_true', help='Run basic tests and exit')
     parser.add_argument('--ai-first', action='store_true', help='Let AI play first')
-    parser.add_argument('--difficulty', choices=['easy', 'medium', 'hard'], default='medium', help='AI difficulty')
+    parser.add_argument('--difficulty', choices=['easy', 'medium', 'hard'], help='AI difficulty')
     args = parser.parse_args([]) 
-
     if args.run_tests:
         run_basic_tests()
         return
 
     human_first = not args.ai_first
-    play_game(human_first=human_first, ai_difficulty=args.difficulty)
+    
+    ai_difficulty = args.difficulty
+    if ai_difficulty is None:
+        while True:
+            difficulty_input = input("Choose AI difficulty (easy, medium, hard): ").strip().lower()
+            if difficulty_input in ['easy', 'medium', 'hard']:
+                ai_difficulty = difficulty_input
+                break
+            else:
+                print("Invalid difficulty. Please choose 'easy', 'medium', or 'hard'.")
+
+    play_game(human_first=human_first, ai_difficulty=ai_difficulty)
 
 
 if __name__ == '__main__':
