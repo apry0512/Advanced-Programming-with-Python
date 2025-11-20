@@ -1,6 +1,7 @@
 # Advanced-Programming-with-Python
 Assignment for Autumn 2025
 Student Name: Aparajita Singh
+Student Number: 3539316
 
 Overview-
 Explore this amazing Connect Four repository! It offers a full Python implementation complete with a fun text-based interface, an optional AI opponent with three exciting difficulty levels, and the ability to export your game data to JSON after every match.
