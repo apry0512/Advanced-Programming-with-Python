@@ -252,7 +252,7 @@ def play_game(human_first: bool = True, ai_difficulty: str = 'medium') -> None:
 
         else:
             # AI's turn
-            print("AI is thinking...")
+            print("AI(0) is thinking...")
             col = pick_best_move(board, AI_PIECE, ai_difficulty)
             row = board.get_next_open_row(col)
             assert row is not None
