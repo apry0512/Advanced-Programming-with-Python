@@ -19,7 +19,7 @@ python connect_four.py
 
 Command-line Options
 Difficulty Set AI difficulty: easy, medium, or hard (default: medium)
-Let the AI start first
+Let the player start first
 Run built-in correctness tests and exit
 
 
@@ -54,7 +54,7 @@ Credits-
 Developed by: Aparajita Singh
 Course: Advanced Programming with Python (ITNPAC1)
 Institution: University of Stirling
-Date: November 2025
+Date: 12th November 2025
 
 
 Example Game Session
